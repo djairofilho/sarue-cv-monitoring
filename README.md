@@ -83,14 +83,3 @@ Você pode ajustar o comportamento do sistema editando o arquivo `config.yaml`:
 
 Este projeto está sob a licença [MIT](LICENSE).
 
-## 📝 Citação
-
-Se este projeto for útil para sua pesquisa acadêmica, por favor, considere citar:
-
-```text
-Insper - Pesquisa: Deteção de Saruês em Câmeras Trap (2024).
-Disponível em: [URL_DO_REPOSITORIO]
-```
-
----
-*Desenvolvido para pesquisa acadêmica e monitoramento de vida selvagem.*
