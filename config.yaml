@@ -1,0 +1,42 @@
+# ============================================================
+# Saruê Detection — Configuração Principal
+# ============================================================
+
+model:
+  # Caminho para o weights do modelo YOLOv8.
+  # Use "yolov8n.pt" para o nano (mais rápido) ou "yolov8s.pt", "yolov8m.pt" etc.
+  # Para fine-tuning futuro, substitua pelo caminho do seu modelo treinado.
+  weights: "yolov8n.pt"
+
+  # Classe COCO a usar quando não há modelo fine-tunado.
+  # 15 = "bird", 16 = "cat", 17 = "dog" — ajuste conforme o modelo.
+  # Quando o modelo for fine-tunado para saruê, defina como null para usar todas as classes.
+  target_class_id: null
+
+detection:
+  # Threshold de confiança padrão (sobrescrito por --conf no CLI)
+  confidence: 0.35
+
+  # Intersection over Union (IoU) threshold para NMS
+  iou: 0.45
+
+output:
+  # Salvar frames sem bounding box quando houver detecção
+  save_raw_frames: true
+
+  # Salvar frames com bounding box desenhado
+  save_annotated_frames: true
+
+  # Gerar vídeo anotado de saída
+  save_annotated_video: true
+
+  # Salvar CSV com todas as detecções
+  save_csv: true
+
+  # Cores da bounding box (BGR)
+  bbox_color: [0, 255, 0]    # verde
+  bbox_thickness: 2
+
+  # Tamanho da fonte para o label
+  font_scale: 0.6
+  font_thickness: 2
