@@ -13,7 +13,7 @@ Este projeto foi desenvolvido para automatizar a triagem de vídeos de câmeras 
 
 ## Exemplo de Detecção
 
-![Exemplo de Detecção de Saruê](outputs/frames_annotated/ann_sarue1.AVI_f100.jpg)
+![Exemplo de Detecção de Saruê](example/ann_sarue1.AVI_f9.jpg)
 *Exemplo de detecção automática realizada pelo modelo YOLOv8.*
 
 
