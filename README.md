@@ -19,7 +19,7 @@ Este projeto foi desenvolvido para automatizar a triagem de vídeos de câmeras 
 
 ## Escolhas Técnicas e Justificativas
 
-- **YOLOv8 (Ultralytics)**: Foi selecionado por ser o padrão atual da indústria para detecção de objetos em tempo real. Sua arquitetura permite alta precisão mesmo em modelos pequenos (Nano), o que é ideal para processar grandes volumes de vídeos de pesquisa em hardware comum.
+- **YOLOv8 (Ultralytics)**: Foi selecionado por ser o padrão atual da indústria para detecção de objetos em tempo real. O projeto utiliza a versão **Medium (`yolov8m.pt`)** para garantir um equilíbrio superior entre precisão de detecção e tempo de processamento, superando as limitações de modelos menores em ambientes complexos de mata.
 - **OpenCV**: Utilizado para a manipulação eficiente de arquivos de vídeo .AVI e renderização das anotações gráficas. É a biblioteca mais robusta para operações de baixo nível em frames.
 - **Arquitetura Modular**: O código foi dividido em responsabilidades claras (Detector, Processor e Utils). Isso permite que, no futuro, o modelo de IA seja trocado ou a lógica de salvamento de arquivos seja alterada sem impactar o restante do sistema.
 - **Configuração via YAML**: Centralizar hiperparâmetros em um arquivo externo facilita a experimentação por pesquisadores que não necessariamente desejam alterar o código Python.
@@ -80,7 +80,7 @@ python src/main.py --video data/
 
 O sistema é altamente customizável através do arquivo `config.yaml`:
 
-- `weights`: Define qual arquivo de pesos carregar (ex: nano, small, medium).
+- `weights`: Define qual arquivo de pesos carregar. Atualmente configurado para `yolov8m.pt` (Medium) para maior precisão. Você pode alterar para `yolov8n.pt` (Nano) caso precise de mais velocidade.
 - `target_class_id`: Filtro de classe (ex: 16 para 'cat'). Deve ser definido como `null` para detectar todas as classes ou quando usar um modelo treinado especificamente.
 - `save_csv`: Habilita ou desabilita a geração do relatório de detecções.
 
