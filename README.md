@@ -11,6 +11,12 @@ Sistema de detecção automática de saruês (gambás) em vídeos de câmera tra
 
 Este projeto foi desenvolvido para automatizar a triagem de vídeos de câmeras trap, identificando frames que contenham saruês, anotando a localização do animal e extraindo os dados para análises futuras como contagem, comportamento e períodos de atividade.
 
+## Exemplo de Detecção
+
+![Exemplo de Detecção de Saruê](outputs/frames_annotated/ann_sarue1.AVI_f100.jpg)
+*Exemplo de detecção automática realizada pelo modelo YOLOv8.*
+
+
 ## Escolhas Técnicas e Justificativas
 
 - **YOLOv8 (Ultralytics)**: Foi selecionado por ser o padrão atual da indústria para detecção de objetos em tempo real. Sua arquitetura permite alta precisão mesmo em modelos pequenos (Nano), o que é ideal para processar grandes volumes de vídeos de pesquisa em hardware comum.

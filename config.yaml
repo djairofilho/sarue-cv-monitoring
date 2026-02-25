@@ -6,7 +6,7 @@ model:
   # Caminho para o weights do modelo YOLOv8.
   # Use "yolov8n.pt" para o nano (mais rápido) ou "yolov8s.pt", "yolov8m.pt" etc.
   # Para fine-tuning futuro, substitua pelo caminho do seu modelo treinado.
-  weights: "yolov8n.pt"
+  weights: "yolov8m.pt"
 
   # Classe COCO a usar quando não há modelo fine-tunado.
   # 15 = "bird", 16 = "cat", 17 = "dog" — ajuste conforme o modelo.
